@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Peças especiais para deixar sua casa com mais personalidade. Encontre decoração, iluminação e objetos na Casa Serena."
+    />
+    <meta name="theme-color" content="#f7f5ef" />
+    <title>Casa Serena — decoração com afeto</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Casa Serena, página inicial">
+        <span class="brand-mark" aria-hidden="true">cs</span>
+        <span>casa<span class="brand-light">serena</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Nossa essência</a>
+      </nav>
+
+      <button class="cart-trigger" id="open-cart" type="button" aria-haspopup="dialog">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M3 4h2l2.1 10.1a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 1.9-1.4L21 8H6" />
+          <circle cx="10" cy="20" r="1" />
+          <circle cx="18" cy="20" r="1" />
+        </svg>
+        <span class="cart-label">Sacola</span>
+        <span class="cart-count" id="cart-count" aria-label="0 itens">0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Feito para morar bem</p>
+          <h1>O aconchego mora nos <em>detalhes.</em></h1>
+          <p class="hero-description">
+            Objetos cheios de personalidade para transformar sua casa no seu lugar favorito.
+          </p>
+          <a class="button button-dark" href="#produtos">
+            Descubra a coleção
+            <span aria-hidden="true">↗</span>
+          </a>
+          <div class="hero-note">
+            <div class="note-avatars" aria-hidden="true"><span>m</span><span>a</span><span>l</span></div>
+            <p><strong>Mais de 2 mil lares</strong><br />decorados com carinho</p>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Ambiente acolhedor decorado com peças naturais">
+          <img
+            src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=85"
+            alt="Sala iluminada com sofá neutro, plantas e decoração em tons naturais"
+          />
+          <div class="hero-sticker"><span>feito com</span><strong>afeto</strong><span>em cada canto</span></div>
+          <div class="hero-caption"><span>01 / 03</span><span>coleção morar</span></div>
+        </div>
+        <div class="hero-side-label" aria-hidden="true">CASA SERENA · DESDE 2024</div>
+      </section>
+
+      <section class="benefits" aria-label="Benefícios da Casa Serena">
+        <div><span class="benefit-icon" aria-hidden="true">✳</span><p><strong>Feito para durar</strong><br />Materiais escolhidos a dedo</p></div>
+        <div><span class="benefit-icon" aria-hidden="true">♡</span><p><strong>Pequenos produtores</strong><br />Histórias por trás de cada peça</p></div>
+        <div><span class="benefit-icon" aria-hidden="true">↗</span><p><strong>Entrega para todo o Brasil</strong><br />Frete grátis acima de R$ 299</p></div>
+      </section>
+
+      <section class="catalog section-wrap" id="produtos">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Escolhas que acolhem</p>
+            <h2>Encontre seu novo <em>favorito</em></h2>
+          </div>
+          <p class="section-intro">Peças simples, bonitas e feitas para fazer parte da sua rotina.</p>
+        </div>
+
+        <div class="catalog-toolbar">
+          <div class="filters" id="category-filters" aria-label="Filtrar produtos por categoria">
+            <button class="filter-button is-active" type="button" data-category="todos" aria-pressed="true">Todos</button>
+            <button class="filter-button" type="button" data-category="decoracao" aria-pressed="false">Decoração</button>
+            <button class="filter-button" type="button" data-category="iluminacao" aria-pressed="false">Iluminação</button>
+            <button class="filter-button" type="button" data-category="textil" aria-pressed="false">Têxteis</button>
+          </div>
+          <p class="product-total" id="product-total" aria-live="polite"></p>
+        </div>
+
+        <p class="visually-hidden" id="catalog-feedback" role="status" aria-live="polite"></p>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <noscript><p class="noscript-message">Ative o JavaScript para explorar os produtos e usar a sacola.</p></noscript>
+      </section>
+
+      <section class="story" id="sobre">
+        <div class="story-image">
+          <img
+            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=85"
+            alt="Detalhes de uma sala com materiais naturais e tons suaves"
+            loading="lazy"
+          />
+        </div>
+        <div class="story-copy">
+          <p class="eyebrow">Nossa essência</p>
+          <h2>Menos pressa.<br />Mais <em>presença.</em></h2>
+          <p>
+            Acreditamos que uma casa bonita não precisa ser perfeita. Ela precisa ter a sua cara,
+            guardar boas histórias e acolher os momentos que importam.
+          </p>
+          <a href="#produtos" class="text-link">Conheça a coleção <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#inicio">
+        <span class="brand-mark" aria-hidden="true">cs</span>
+        <span>casa<span class="brand-light">serena</span></span>
+      </a>
+      <p>Um lugar bonito para chamar de seu.</p>
+      <span class="footer-copy">© 2026 Casa Serena · Feito com carinho no Brasil</span>
+    </footer>
+
+    <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title">
+      <div class="cart-header">
+        <div>
+          <p class="eyebrow">Sua seleção</p>
+          <h2 id="cart-title">Sua sacola <span id="dialog-cart-count">(0)</span></h2>
+        </div>
+        <form method="dialog">
+          <button class="icon-button" aria-label="Fechar sacola">×</button>
+        </form>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-empty" id="cart-empty">
+        <span aria-hidden="true">♡</span>
+        <p>Sua sacola está esperando<br />por algo especial.</p>
+        <button class="text-link" id="continue-shopping" type="button">Continuar explorando <span aria-hidden="true">→</span></button>
+      </div>
+      <div class="cart-footer" id="cart-footer" hidden>
+        <p class="shipping-note">Frete calculado na próxima etapa.</p>
+        <div class="cart-subtotal"><span>Subtotal</span><strong id="cart-subtotal">R$ 0,00</strong></div>
+        <button class="button button-dark checkout-button" id="checkout-button" type="button">Finalizar pedido <span aria-hidden="true">↗</span></button>
+        <p class="demo-note">Demonstração de portfólio · nenhum pagamento será realizado.</p>
+      </div>
+      <p class="cart-feedback" id="cart-feedback" role="status" aria-live="polite"></p>
+    </dialog>
+  </body>
+</html>
